@@ -55,69 +55,35 @@ Sample Output 2
 3
 2
 8
-Submissions: 22
-Max Score: 0
-Difficulty: Medium
-Rate This Challenge:
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class sll:
+    def __init__(self):
+        self.head=self.tail=None
+    def insertLast(self,data):
+        n=Node(data)
+        if self.head==None:
+            self.head=self.tail=n
+        else:
+            self.tail.next=n
+            self.tail=n
+    def show(self):
+        if self.head==None:
+            print("List is empty")
+            return
+        temp=self.head
+        while temp!=None:
+            print(temp.data)
+            temp=temp.next
+s1=sll()
+while True:               
+    x=int(input())
+    if x==-1:
+        break
+    s1.insertLast(x)
+s1.show()
 
     
-More
- 
-1
-class Node:
-2
-    def __init__(self,data):
-3
-        self.data=data
-4
-        self.next=None
-5
-class sll:
-6
-    def __init__(self):
-7
-        self.head=self.tail=None
-8
-    def insertLast(self,data):
-9
-        n=Node(data)
-10
-        if self.head==None:
-11
-            self.head=self.tail=n
-12
-        else:
-13
-            self.tail.next=n
-14
-            self.tail=n
-15
-    def show(self):
-16
-        if self.head==None:
-17
-            print("List is empty")
-18
-            return
-19
-        temp=self.head
-20
-        while temp!=None:
-21
-            print(temp.data)
-22
-            temp=temp.next
-23
-s1=sll()
-24
-while True:               
-25
-    x=int(input())
-26
-    if x==-1:
-27
-        break
-28
-    s1.insertLast(x)
-29
-s1.show()
